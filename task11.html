@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript task11</title>
+</head>
+
+<body>
+    <label>请输入北京今天的空气质量
+        <input type="text" name="weather" id="air-quality">
+    </label>
+    <button id="conform">确认填写</button>
+    <div>您输入的值是：<span id="data">尚无录入</span></div>
+    <script type="text/javascript">
+    // (function() {
+    //     let button = document.getElementById('conform');
+    //     let details = document.getElementById('data');
+    //     button.onclick = function() {
+    //         let input = document.getElementById('air-quality').value;
+    //         if (input === null) {
+    //             alret("请输入有效数值")
+    //         } else {
+    //             data.innerHTML = input
+    //         }
+    //     }
+    // })()
+
+    (function() {
+            var $ = function (id) {
+                return document.getElementById(id);
+            }
+            var button = $('conform');
+            var details = $('data');
+            button.onclick = function() {
+                var input = $('air-quality').value;
+                if (input === null) {
+                    alert('请输入有效值')
+                } else {
+                    console.log(input)
+                    data.innerHTML = input
+                }
+              }
+            })()
+    </script>
+</body>
+
+</html>
